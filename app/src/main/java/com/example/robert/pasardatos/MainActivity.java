@@ -107,6 +107,7 @@ public class MainActivity extends Activity {
         AdapterView.AdapterContextMenuInfo info =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch (item.getItemId()) {
+            //Editar Contacto
             case R.id.CtxLblOpc1:
                 showToast("Menu Edicion");
                 Intent Inted = new Intent(MainActivity.this, Editar.class);
@@ -114,6 +115,8 @@ public class MainActivity extends Activity {
                 Inted.putExtra("posicion", info.position);
                 startActivityForResult(Inted, 1);
                 return true;
+            //Borrar Contacto
+
             case R.id.CtxLblOpc2:
                 agendas.remove(info.position);
                 showToast("Contacto Borrado");
